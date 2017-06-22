@@ -16,7 +16,7 @@ Currently implemented is a non-cache proxy mode, and a simple cache-to-memory mo
 	std::stringstream respout;
 
 	// request using the proxy, may return/store requests previously cached
-	proxy.request(PCacheProxy::RequestStream(req, reqin), PCacheProxy::ResponseStream(resp, respout));
+	proxy.request(PCacheProxy::RequestStream(req), PCacheProxy::ResponseStream(resp, respout));
 
 	std::cout << "==================== REQUEST OUTPUT ====================" << std::endl;
 	std::cout << respout.str() << std::endl;
